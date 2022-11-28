@@ -1,6 +1,7 @@
 import re
 import fileinput
 
+print('Usage : python3 update_links.py <file>')
 with fileinput.input(inplace=True,encoding='utf-8') as f:
     for line in f:
         if re.search('!\[\]\((http[^)\!\[\]\(]+)\)', line):
